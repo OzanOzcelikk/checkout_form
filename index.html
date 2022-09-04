@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/5c7edfd842.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Checkout</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>  
+    
+  </head>
+
+  <body>
+    <header><h1 id="checkout-title">Checkout</h1></header>
+
+    <main>
+      <form action="" id="form" >
+        <div id="contact-information" class="data-form">
+          <h1>Contact information</h1>
+          <div class="campo">
+            <label for="email">Email</label>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                name="email"
+                id="user-email"
+                placeholder="Enter your email..."
+                required
+              />
+            </div>
+          </div>
+          <div class="campo">
+            <label for="phone">Phone</label>
+            <div class="input-field">
+              <i class="fas fa-phone-alt"></i>
+              <input
+                type="tel"
+                name="phone"
+                id="user-phone-number"
+                placeholder="Enter your phone..."
+                required
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="shipping-address" class="data-form">
+          <h1>Shipping address</h1>
+          <div class="campo">
+            <label for="full-name">Full name</label>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                name="full-name"
+                id="user-full-name"
+                placeholder="Enter your Full name..."
+                required
+              />
+            </div>
+            <div class="campo">
+              <label for="address">Address</label>
+              <div class="input-field">
+                <i class="fas fa-home"></i>
+                <input
+                  type="text"
+                  name="address"
+                  id="user-address"
+                  placeholder="Enter your address..."
+                  required
+                />
+              </div>
+            </div>
+            <div class="campo">
+              <label for="city">City</label>
+              <div class="input-field">
+                <i class="fas fa-city"></i>
+                <input
+                  type="text"
+                  name="city"
+                  id="user-city"
+                  placeholder="Enter your city..."
+                  required
+                />
+              </div>
+            </div>
+            <div class="campo" id="country-field">
+              <label for="your-country">Country</label>
+              <div class="input-field">
+                <i class="fas fa-globe-europe"></i>
+                <select name="your-country" id="user-country" required>
+                  <option value="Turkey">Turkey</option>
+                  <option value="Turkey">Germany</option>
+                  <option value="Turkey">USA</option>
+                  <option value="Turkey">Canada</option>
+                  <option value="Turkey">UK</option>
+                </select>
+              </div>
+            </div>
+            <div class="campo" id="postal-code-field">
+              <label for="postal-code">Post Code</label>
+              <div class="input-field">
+                <i class="fas fa-mail-bulk"></i>
+                <input
+                  type="text"
+                  name="postal-code"
+                  id="user-postal-code"
+                  placeholder="Enter your postal code..."
+                  required
+                />
+              </div>
+            </div>
+            <div class="campo">
+              <input type="checkbox" name="reminder" id="user-reminder" required/>
+              <label for="reminder">See this information next time</label>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div id="products-preview">
+        <div id="product-painel">
+          <div class="product">
+            <img src="./img/photo1.png" alt="" />
+            <div class="product-info">
+              <h2>Vintage Backbag</h2>
+              <p>
+                <strong>$54.99</strong>
+                <span class="line-through">$94.99</span>
+              </p>
+
+              <div class="quantity-controller">
+                <button onclick="azalt1()">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <p id="text1">1</p>
+                <button onclick="arttir1()">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product">
+            <img src="./img/photo2.png" alt="" />
+            <div class="product-info">
+              <h2>Levi Shoes</h2>
+              <p>
+                <strong>$74.99</strong>
+                <span class="line-through">$124.99</span>
+              </p>
+
+              <div class="quantity-controller">
+                <button onclick="azalt2()">
+                  <i class="fas fa-minus"></i>
+                </button>
+                <p id="text2">1</p>
+                <button onclick="arttir2()">
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="discount" id="discount">
+            <label for="">Enter the discount code (e.g: D20)</label>
+            <input type="text" id="discount-input">
+            <button id="discount-button" onclick="discount()">Apply Discount</button>
+          </div>
+          <div class="buy-detail" id="shipping">
+            <p>Shipping</p>
+            <p>$19</p>
+          </div>
+          <div class="buy-detail" id="total">
+            <p>Product  Total</p>
+            <p id="totaltext">$148.98</p>
+          </div>
+          <div class="buy-detail discount" id="discount">
+            <p>Discount</p>
+            <p class="line-through" ><span id="discounttext">0</span>% $ <span id="discountvalue"></span> </p>
+          </div>
+          <div class="buy-detail" id="Toptotal">
+            <p>Total</p>
+            <p>$<span id="Toptotaltext">0</span> </p>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+    <footer>
+      <button id="btn-submit" form="form" onclick="sa()" type="submit" >Continue</button>
+    </footer>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

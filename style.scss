@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sa1;
+}
+@font-face {
+    font-family: sa1;
+    src: url('./fonts/montserrat-regular.ttf');
+}
+
+body{
+    
+    header{text-align: center;}
+
+         
+    main{
+        margin-top: 20px;
+        margin-left: 10vw;
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        form{
+            width: 70%;
+            h1 {
+                font-size: 18px;
+                color: #333;
+                margin: 15px 0;
+            }
+            .campo{
+                margin-top: 10px;
+            }
+            label{
+                font-size: 12px;
+                color: #4F4F4F;
+    
+            }
+            .input-field{
+                
+                border: 1px solid #828282;
+                padding: 8px 5px 8px 10px;
+                color: #828282;
+                font-size: 14px;
+                border-radius: 5px;
+                margin-top: 10px;
+                
+                
+            }
+            input,select{
+                text-align: left;
+                border: none;
+                width: 80%;
+                &:focus{
+                    outline: none;
+                }
+
+            }
+            
+            #user-reminder{
+                width: 10%;
+            }
+            #shipping-address{
+                margin-top: 30px;
+                #country-field{
+                    display: inline-block;
+                }
+                #postal-code-field{
+                    display: inline-block;
+                }
+
+            }
+            
+        }
+        #products-preview{
+            h2 {
+                font-size: 16px;
+                color: #4E5150;
+                margin: 5px 0;
+            }
+            .line-through {
+                text-decoration: line-through;
+            }
+            
+            #product-painel{
+                position: absolute;
+                width: 25%;
+                border-radius: 10px;
+                background-color: #eeeeee;
+                padding: 10px 20px;
+    
+                
+                .product{
+                    margin: 10px 0;
+                    .product-info{
+                        width: 100%;
+                    }
+
+                    p {
+                        font-size: 12px;
+                        color: #4E5150;
+                        margin: 5px 0;
+                        strong {
+                            color: #f2994a;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                    }
+                    display: flex;
+
+                    img{
+                        width: 30%;
+                        
+                        border-radius: 10px;
+                        margin-right: 20px;
+                    }
+                    .quantity-controller {
+                        border-radius: 5px;
+                        border: 1px solid rgb(136, 136, 136);
+                        display: flex;
+                        justify-content: space-around;
+                        width: 50%;
+                        margin-top: 25px;
+                        button {
+                            margin: 5px 0;
+                            border: 0;
+                            background-color: #e0e0e0;
+                            border-radius: 5px;
+                            padding: 5px;
+                            text-align: center;
+                            p{line-height: 24px;    
+                                }
+                        }
+                    }
+                }
+
+                .discount {
+                    min-width: 205px;
+                    margin-top: 50px;
+                    width: 90%;
+                    label,input{
+                        float:inline-end;
+
+                    }
+                    label{
+                        font-size: 12px;
+                        
+                    }
+                    input{
+                        border: solid 1px;
+                        background-color: #ffffff;
+                        width: 30%;
+                    }
+                    button{
+                        
+                    }
+                }
+                .buy-detail {
+                    margin: 5px 0;
+                    border-top: 1px solid #BDBDBD;
+                    display: flex;
+                    position: relative;
+                    width: 90%;
+                    font-family: Mon, Arial, Helvetica, sans-serif;
+                    p {
+                        display: block;
+                        width: 50%;
+                        &:nth-child(2) {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+        
+
+    } 
+    footer{
+        
+        #btn-submit{
+            margin-left: 45vw;
+        width: 10%;
+        padding: 14px 0;
+        border-radius: 10px;
+        background-color: #f2994a;
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+        border: none;
+        position: absolute;
+        min-width: 75px;
+        min-height: 45px;
+        
+        
+    }
+
+    }
+    
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    body{
+        
+    main{
+        margin-left: 25%;
+        flex-direction: column-reverse;
+
+        form{margin-top: 30vh;
+            width: 100%;
+        }
+
+        #products-preview{
+            height: 30vh;
+            width: 100%;
+            
+            #product-painel{
+                width: 30vh;
+            }
+            
+        }
+
+    }
+    }
+
+}

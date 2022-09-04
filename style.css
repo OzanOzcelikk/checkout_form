@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sa1;
+}
+
+@font-face {
+  font-family: sa1;
+  src: url("./fonts/montserrat-regular.ttf");
+}
+body header {
+  text-align: center;
+}
+body main {
+  margin-top: 20px;
+  margin-left: 10vw;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+body main form {
+  width: 70%;
+}
+body main form h1 {
+  font-size: 18px;
+  color: #333;
+  margin: 15px 0;
+}
+body main form .campo {
+  margin-top: 10px;
+}
+body main form label {
+  font-size: 12px;
+  color: #4F4F4F;
+}
+body main form .input-field {
+  border: 1px solid #828282;
+  padding: 8px 5px 8px 10px;
+  color: #828282;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+body main form input, body main form select {
+  text-align: left;
+  border: none;
+  width: 80%;
+}
+body main form input:focus, body main form select:focus {
+  outline: none;
+}
+body main form #user-reminder {
+  width: 10%;
+}
+body main form #shipping-address {
+  margin-top: 30px;
+}
+body main form #shipping-address #country-field {
+  display: inline-block;
+}
+body main form #shipping-address #postal-code-field {
+  display: inline-block;
+}
+body main #products-preview h2 {
+  font-size: 16px;
+  color: #4E5150;
+  margin: 5px 0;
+}
+body main #products-preview .line-through {
+  text-decoration: line-through;
+}
+body main #products-preview #product-painel {
+  position: absolute;
+  width: 25%;
+  border-radius: 10px;
+  background-color: #eeeeee;
+  padding: 10px 20px;
+}
+body main #products-preview #product-painel .product {
+  margin: 10px 0;
+  display: flex;
+}
+body main #products-preview #product-painel .product .product-info {
+  width: 100%;
+}
+body main #products-preview #product-painel .product p {
+  font-size: 12px;
+  color: #4E5150;
+  margin: 5px 0;
+}
+body main #products-preview #product-painel .product p strong {
+  color: #f2994a;
+  font-size: 16px;
+  font-weight: 600;
+}
+body main #products-preview #product-painel .product img {
+  width: 30%;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+body main #products-preview #product-painel .product .quantity-controller {
+  border-radius: 5px;
+  border: 1px solid rgb(136, 136, 136);
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  margin-top: 25px;
+}
+body main #products-preview #product-painel .product .quantity-controller button {
+  margin: 5px 0;
+  border: 0;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+body main #products-preview #product-painel .product .quantity-controller button p {
+  line-height: 24px;
+}
+body main #products-preview #product-painel .discount {
+  min-width: 205px;
+  margin-top: 50px;
+  width: 90%;
+}
+body main #products-preview #product-painel .discount label, body main #products-preview #product-painel .discount input {
+  float: inline-end;
+}
+body main #products-preview #product-painel .discount label {
+  font-size: 12px;
+}
+body main #products-preview #product-painel .discount input {
+  border: solid 1px;
+  background-color: #ffffff;
+  width: 30%;
+}
+body main #products-preview #product-painel .buy-detail {
+  margin: 5px 0;
+  border-top: 1px solid #BDBDBD;
+  display: flex;
+  position: relative;
+  width: 90%;
+  font-family: Mon, Arial, Helvetica, sans-serif;
+}
+body main #products-preview #product-painel .buy-detail p {
+  display: block;
+  width: 50%;
+}
+body main #products-preview #product-painel .buy-detail p:nth-child(2) {
+  text-align: right;
+}
+body footer #btn-submit {
+  margin-left: 45vw;
+  width: 10%;
+  padding: 14px 0;
+  border-radius: 10px;
+  background-color: #f2994a;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  position: absolute;
+  min-width: 75px;
+  min-height: 45px;
+}
+
+@media only screen and (max-width: 700px) {
+  body main {
+    margin-left: 25%;
+    flex-direction: column-reverse;
+  }
+  body main form {
+    margin-top: 30vh;
+    width: 100%;
+  }
+  body main #products-preview {
+    height: 30vh;
+    width: 100%;
+  }
+  body main #products-preview #product-painel {
+    width: 30vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
